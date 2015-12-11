@@ -22,7 +22,6 @@ You will be working **individually** for this first project, but we'll be giving
 Make sure to do all of the following with your app:
 
 * Use HTML, CSS/SASS, JavaScript/jQuery with DOM manipulation
-* Use Yeoman, Grunt, Bower
 * Must be deployed
 
 <br>
@@ -36,7 +35,8 @@ These are for extra credit! Don't focus on these until you've hit the core requi
 * Make it responsive
 * Add A.I. (player vs. computer)
 * Add avatar choices for the player 
-* Artificial Intelligence
+* Add a timer
+* Add music while a player makes a choice
 
 <br>
 
@@ -45,14 +45,14 @@ These are for extra credit! Don't focus on these until you've hit the core requi
 ####Project Plan deliverables:
 
 * Wireframes -- what does the app look like?
-* Mock-ups (optional)
+* Mock-ups (optional - for example, checkout Mockingbird)
 * Stories in Trello -- what do your objectives look like, broken down into unit-sized chunks?
 * GitHub -- create a repo for your app and show that you've been commiting early and often, while utilizing clear commit messages.
 
 
-####Completed Project deliverables (Due ***Wednesday 8/26***):
+####Completed Project deliverables (Due ***Wednesday 12/16***):
 
-* Present your project Monday morning
+* Present your project Wednesday afternoon (around 3pm)
 * Link to Trello Board
 * Link to Deployed App
 * Link to Wirefames (photos will work too!)
