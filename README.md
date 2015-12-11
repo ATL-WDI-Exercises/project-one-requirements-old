@@ -5,7 +5,6 @@ For your first project you'll build an app from one of the following:
 - Tic-Tac-Toe or a variant of it (Super-Tic-Tac-Toe, Connect 4)
 - Hangman
 - Jeopardy
-- Simple Arcade Game (Duck Hunt) 
 
 The objectives of this project are:
 
