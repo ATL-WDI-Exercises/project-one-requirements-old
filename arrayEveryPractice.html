@@ -1,0 +1,51 @@
+<html>
+   <head>
+      <title>JavaScript Array every Method</title>
+   </head>
+   
+   <body>
+   
+      <script type="text/javascript">
+         if (!Array.prototype.every)
+         {
+            Array.prototype.every = function(fun /*, thisp*/)
+            {
+               var len = this.length;
+               if (typeof fun != "function")
+               throw new TypeError();
+               
+               var thisp = arguments[1];
+               for (var i = 0; i < len; i++)
+               {
+                  if (i in this && !fun.call(thisp, this[i], i, this))
+                  return false;
+               }
+               return true;
+            };
+         }
+         function isBigEnough(element, index, array) {
+            // return (element >= 10);
+            return firstArray.every((element)
+         }
+         
+         var passed = [12, 16, 18, 130, 44].every(isBigEnough);
+         document.write("First Test Value : " + passed ); 
+         
+         passed = [12, 54, 18, 130, 44].every(isBigEnough);
+         document.write("Second Test Value : " + passed ); 
+      </script>
+      
+   </body>
+</html>
+
+
+<!-- var firstArray = [1, 2, 3, 4, 5];
+var secondArray = [3, 2, 5];
+
+// Array.every is like a logical AND over every item in an array.
+// the function being passed into Array.every can then be a check
+// against the indices of another array, like this: 
+
+secondArray.every(function(item) {
+return firstArray.indexOf(item) >= 0
+)};  -->
