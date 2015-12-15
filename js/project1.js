@@ -26,6 +26,8 @@ function press(num) {
         blueMoves.push(num);
     }
 
+(redTurn ? document.getElementById("title").style.color = "blue" : document.getElementById("title").style.color = "red")
+
     console.log(redMoves);
     console.log(blueMoves);
     var buttonId = "button" + num;
@@ -43,6 +45,14 @@ function press(num) {
     var blueWins = winCombos.some(function(wc) {
       return checkForWin('blue', blueMoves, wc);  
     });
+
+    if (redWins) {
+      endGame("red");
+    } else if (blueWins) {
+      endGame("blue");
+    }
+
+
     
     redTurn = !redTurn;
     console.log("is it reds turn?" + redTurn);
@@ -84,6 +94,13 @@ function press9() {
   press(9);
 }
 
+// function blink() {
+//    var f = document.getElementById("");
+//    setInterval(function() {
+//       f.style.display = (f.style.display == 'none' ? '' : 'none');
+//    }, 1000);
+// }
+
 function checkForWin(colorName, colorMoves, winCombo) {
      var result = winCombo.every(function(item) { return colorMoves.indexOf(item) >= 0; });
      if (result) {
@@ -91,6 +108,20 @@ function checkForWin(colorName, colorMoves, winCombo) {
      } else {
        console.log('checked ' + colorName + ' for a winner...none found');
      }
-     return result;
+     return result;//returns true if there IS a winner
     };
+
+function endGame(winner) {
+  
+  document.getElementById("title").style.color = winner; //the title is the color of the winner
+  document.getElementsByClassName("gameButton"); //remaining buttons should become disabled
+
+
+}
+
+
+  //causes the title to blink in the color of the winner;
+  //diables the remaining buttons excl. reset.
+  //maybe if the result is a tie, the reset button will blink.
+
 

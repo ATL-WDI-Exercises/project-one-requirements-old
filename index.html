@@ -9,7 +9,7 @@
 <body>
 
 <div id ="container">
-<h1>tic tac toe</h1>
+<h1 id ="title">tic tac toe</h1>
 
   <section id="gameboard">
 
@@ -19,15 +19,15 @@
 
     <div id="leftColumnTop">
       
-          <button id = "button1"  onclick="press1( )"></button>
+          <button class = "gameButton"  id ="button1" onclick="press1( )"></button>
     </div>
 
     <div id="leftColumnMiddle">
-          <button id = "button4" onclick="press4( )"></button>
+          <button class = "gameButton" id ="button4"onclick="press4( )"></button>
     </div>
 
     <div id="leftColumnBottom">
-          <button id = "button7" onclick="press7( )"></button>
+          <button class = "gameButton" id ="button7" onclick="press7( )"></button>
     </div>
 
   </div> 
@@ -40,15 +40,15 @@
   <div id="centerColumn"> <!-- center column -->
 
     <div id="centerColumnTop">
-          <button id = "button2" onclick="press2( )"></button>
+          <button class = "gameButton" id ="button2" onclick="press2( )"></button>
     </div>
 
     <div id="centerColumnMiddle">
-          <button id = "button5" onclick="press5( )"></button>
+          <button class = "gameButton" id ="button5" onclick="press5( )"></button>
     </div>
 
     <div id="centerColumnBottom">
-          <button id = "button8" onclick="press8( )"></button>
+          <button class = "gameButton" id ="button8" onclick="press8( )"></button>
     </div>
 
   </div> <!-- end of center column -->
@@ -56,19 +56,21 @@
    <div id="rightColumn"><!-- right column -->
 
     <div id="rightColumnTop">
-              <button id = "button3" onclick="press3( )"></button>
+              <button class = "gameButton" id="button3" onclick="press3( )"></button>
     </div>
 
     <div id="rightColumnMiddle">
-              <button id = "button6" onclick="press6( )"></button>
+              <button class = "gameButton" id="button6" onclick="press6( )"></button>
     </div>
 
     <div id="rightColumnBottom">
-              <button id = "button9" onclick="press9( )"></button>
+              <button class = "gameButton" id="button9" onclick="press9( )"></button>
     </div>
 
   </div><!-- end of right column -->
   <button id = "reset" onclick = "reset()">reset</button>
+
+ 
 
 
   </section><!-- end of gameboard -->
