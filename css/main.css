@@ -1,73 +1,101 @@
+#container {
+  height:24rem;
+  width:16rem;
+  border:1px solid black;
+  border-radius: 25px;
+  text-align: center;
+}
+
+
 #gameboard {
-  background-color: gray;
+  height:auto;
+  width: 100%;
+  text-align: center;
+  margin:0% auto auto auto;
+
 }
 
 h1{
-  color: red;
+  color: black;
+  font-size: 2rem;
+  font-family: helvetica;
+  letter-spacing: .5rem;
+  text-align: center;
+  margin: 0% auto auto 4% ;
 }
 
  #leftColumn{
   display: inline-block;
   height:auto;
-  width:33%;
+  width:32.2%;
+  margin:-40% auto auto auto;
  }
 
 button{
-  height:100%;
-  width: 66%;
+  height:95%;
+  width: 95%;
+  margin:2.5% auto auto auto;
+  font-size: 2.5rem;
+}
+
+#reset{
+  background-color: green;
+  border-radius:  23px;
+  height:4.5rem;
+  width:98%;
+  margin:2.5% auto auto auto;
 }
 
 #leftColumnTop{
-  border: 3px solid black;
+
+  height:5.5rem;
 }
 
 #leftColumnMiddle{
-  border: 3px solid black;
+  height:5.5rem;
+
 }
 
 #leftColumnBottom{
-  border: 3px solid black;
+  height:5.5rem;
 }
 
 #centerColumn{
   display: inline-block;
   height:auto;
-  width:33%;
+  width:32.2%;
  }
 
 #centerColumnTop{
-  border: 3px solid black;
+  height:5.5rem;
 }
 
 #centerColumnMiddle{
-  border: 3px solid black;
+  height:5.5rem;
 }
 
 #centerColumnBottom{
-  border: 3px solid black;
+  height:5.5rem;
 }
 
 #rightColumn{
   display: inline-block;
   height:auto;
-  width:33%;
+  width:32.2%;
  }
 
 #rightColumnTop{
-  border: 3px solid black;
+  height: 5.5rem;
 }
 
 #rightColumnMiddle{
-  border: 3px solid black;
+  height: 5.5rem;
 }
 
 #rightColumnBottom{
-  border: 3px solid black;
+  height: 5.5rem;
 }
 
-h2{
-  color: green;
-}
 
 #leftColumn {
 

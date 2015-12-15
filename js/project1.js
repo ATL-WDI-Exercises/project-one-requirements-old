@@ -1,186 +1,96 @@
-
-
-var red = ["red="];
-var blue = ["blue="];
-var redTurn = (10  > 9);
+var redMoves = ["red="];
+var blueMoves = ["blue="];
+var redTurn = (10 >= 9);
 console.log("red begins");
+"use strict";
 
-function press1( ) {
-
-if (redTurn == true){
-red.push(1);
-} else {
-blue.push(1);
+function reset() {
+location.reload();
 }
 
-console.log(red);
-console.log(blue);
-if (redTurn == true){
-      document.getElementById("button1").style.background="#ff0000";
+var winCombos = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [1, 4, 7],
+  [2, 5, 8],
+  [3, 6, 9],
+  [1, 5, 9],
+  [3, 5, 7]
+  ];
+
+function press(num) {
+  if (redTurn == true) {
+        redMoves.push(num);
     } else {
-      document.getElementById("button1").style.background="#0000ff";
+        blueMoves.push(num);
     }
-document.getElementById("button1").disabled = true;
-redTurn = !redTurn;
-console.log("is it reds turn?" + redTurn );
-}
 
-function press4( ) {
-
-  if (redTurn == true ){
-    red.push(4);
-  } else {
-    blue.push(4);
-  }
-
-console.log(red);
-console.log(blue);
-if (redTurn == true){
-      document.getElementById("button4").style.background="#ff0000";
+    console.log(redMoves);
+    console.log(blueMoves);
+    var buttonId = "button" + num;
+    if (redTurn == true) {
+        document.getElementById(buttonId).style.background = "#ff0000";
     } else {
-      document.getElementById("button4").style.background="#0000ff";
+        document.getElementById(buttonId).style.background = "#0000ff";
     }
-document.getElementById("button4").disabled = true;
-redTurn = !redTurn;
-console.log("is it reds turn?" + redTurn );
+    document.getElementById(buttonId).disabled = true;
+
+    var redWins = winCombos.some(function(wc) {
+      return checkForWin('red', redMoves, wc);  
+    });
+
+    var blueWins = winCombos.some(function(wc) {
+      return checkForWin('blue', blueMoves, wc);  
+    });
+    
+    redTurn = !redTurn;
+    console.log("is it reds turn?" + redTurn);
 }
 
-function press7( ) {
-
-  if (redTurn == true ){
-    red.push(7);
-  } else {
-    blue.push(7);
-  }
-
-console.log(red);
-console.log(blue);
-if (redTurn == true){
-      document.getElementById("button7").style.background="#ff0000";
-    } else {
-      document.getElementById("button7").style.background="#0000ff";
-    }
-document.getElementById("button7").disabled = true;
-redTurn = !redTurn;
-console.log("is it reds turn?" + redTurn );
+function press1() {
+  press(1);
 }
 
-function press2( ) {
-
-if (redTurn == true){
-red.push(2);
-} else {
-blue.push(2);
+function press2() {
+  press(2);
 }
 
-console.log(red);
-console.log(blue);
-if (redTurn == true){
-      document.getElementById("button2").style.background="#ff0000";
-    } else {
-      document.getElementById("button2").style.background="#0000ff";
-    }
-document.getElementById("button2").disabled = true;
-redTurn = !redTurn;
-console.log("is it reds turn?" + redTurn );
+function press3() {
+   press(3);
 }
 
-function press5( ) {
-
-  if (redTurn == true ){
-    red.push(5);
-  } else {
-    blue.push(5);
-  }
-
-console.log(red);
-console.log(blue);
-if (redTurn == true){
-      document.getElementById("button5").style.background="#ff0000";
-    } else {
-      document.getElementById("button5").style.background="#0000ff";
-    }
-document.getElementById("button5").disabled = true;
-redTurn = !redTurn;
-console.log("is it reds turn?" + redTurn );
+function press4() {
+  press(4);
 }
 
-function press8( ) {
-
-  if (redTurn == true ){
-    red.push(8);
-  } else {
-    blue.push(8);
-  }
-
-console.log(red);
-console.log(blue);
-if (redTurn == true){
-      document.getElementById("button8").style.background="#ff0000";
-    } else {
-      document.getElementById("button8").style.background="#0000ff";
-    }
-document.getElementById("button8").disabled = true;
-redTurn = !redTurn;
-console.log("is it reds turn?" + redTurn );
+function press5() {
+  press(5);
 }
 
-function press3( ) {
-
-if (redTurn == true){
-red.push(3);
-} else {
-blue.push(3);
+function press6() {
+  press(6);
 }
 
-console.log(red);
-console.log(blue);
-if (redTurn == true){
-      document.getElementById("button3").style.background="#ff0000";
-    } else {
-      document.getElementById("button3").style.background="#0000ff";
-    }
-document.getElementById("button3").disabled = true;
-redTurn = !redTurn;
-console.log("is it reds turn?" + redTurn );
+function press7() {
+  press(7);
 }
 
-function press6( ) {
-
-  if (redTurn == true ){
-    red.push(6);
-  } else {
-    blue.push(6);
-  }
-
-console.log(red);
-console.log(blue);
-if (redTurn == true){
-      document.getElementById("button6").style.background="#ff0000";
-    } else {
-      document.getElementById("button6").style.background="#0000ff";
-    }
-document.getElementById("button6").disabled = true;
-redTurn = !redTurn;
-console.log("is it reds turn?" + redTurn );
+function press8() {
+  press(8);
 }
 
-function press9( ) {
-
-  if (redTurn  == true){
-    red.push(9);
-  } else {
-    blue.push(9);
-  }
-
-console.log(red);
-console.log(blue);
-  if (redTurn == true){
-      document.getElementById("button9").style.background="#ff0000";
-    } else {
-      document.getElementById("button9").style.background="#0000ff";
-    }
-document.getElementById("button9").disabled = true;
-redTurn = !redTurn;
-console.log("is it reds turn?" + redTurn );
+function press9() {
+  press(9);
 }
+
+function checkForWin(colorName, colorMoves, winCombo) {
+     var result = winCombo.every(function(item) { return colorMoves.indexOf(item) >= 0; });
+     if (result) {
+    console.log('winner found!!! ' + colorName + ' wins!');
+     } else {
+       console.log('checked ' + colorName + ' for a winner...none found');
+     }
+     return result;
+    };
+

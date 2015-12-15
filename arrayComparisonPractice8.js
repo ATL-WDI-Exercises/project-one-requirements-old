@@ -1,11 +1,15 @@
-function test (){
+var firstArray = [1,2,3,4,5];
+var secondArray = [3,2,5];
 
-  [1,2,3].every(function(x) { return x <5; }  ) ;
 
-  if (test = true) {
-    console.log("true");
-  } else {
-    console.log("false");
-  }
+function checkForWin(firstArray, secondArray) {
+
+
+
+  return secondArray.every(function(item) {
+  return firstArray.indexOf(item) >= 0;
+  });
 }
-// => true: all elts are < 5
+
+checkForWin(firstArray,secondArray);
+console.log(checkForWin(firstArray,secondArray));
