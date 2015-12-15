@@ -94,12 +94,12 @@ function press9() {
   press(9);
 }
 
-// function blink() {
-//    var f = document.getElementById("");
-//    setInterval(function() {
-//       f.style.display = (f.style.display == 'none' ? '' : 'none');
-//    }, 1000);
-// }
+function blink() {
+   var f = document.getElementById("title");
+   setInterval(function() {
+      f.style.display = (f.style.display == 'none' ? '' : 'none');
+   }, 1000);
+}
 
 function checkForWin(colorName, colorMoves, winCombo) {
      var result = winCombo.every(function(item) { return colorMoves.indexOf(item) >= 0; });
@@ -114,11 +114,15 @@ function checkForWin(colorName, colorMoves, winCombo) {
 function endGame(winner) {
   
   document.getElementById("title").style.color = winner; //the title is the color of the winner
-  document.getElementsByClassName("gameButton"); //remaining buttons should become disabled
+  var x = document.getElementsByClassName("gameButton")
+  for (i = 0; i < x.length; i++) { 
+  x[ i ].setAttribute("disabled", "true");
+
+  blink(title);
 
 
 }
-
+}
 
   //causes the title to blink in the color of the winner;
   //diables the remaining buttons excl. reset.
