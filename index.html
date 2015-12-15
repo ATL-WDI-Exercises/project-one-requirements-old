@@ -1,82 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>samuelpack-project1-TicTacToe</title>
-  <link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>samuelpack-project1-TicTacToe</title>
+    <link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
-
-<div id ="container">
-<h1 id ="title">tic tac toe</h1>
-
-  <section id="gameboard">
-
-<!-- leftColumn -->
-
-  <div id="leftColumn">
-
-    <div id="leftColumnTop">
-      
-          <button class = "gameButton"  id ="button1" onclick="press1( )"></button>
+    <div id="container">
+        <h1 id="title">tic tac toe</h1>
+        <section id="gameboard">
+            <div id="leftColumn">
+                <div id="leftColumnTop">
+                    <button class="gameButton" id="button1" onclick="press1( )"></button>
+                </div>
+                <div id="leftColumnMiddle">
+                    <button class="gameButton" id="button4" onclick="press4( )"></button>
+                </div>
+                <div id="leftColumnBottom">
+                    <button class="gameButton" id="button7" onclick="press7( )"></button>
+                </div>
+            </div>
+            <div id="centerColumn">
+                <div id="centerColumnTop">
+                    <button class="gameButton" id="button2" onclick="press2( )"></button>
+                </div>
+                <div id="centerColumnMiddle">
+                    <button class="gameButton" id="button5" onclick="press5( )"></button>
+                </div>
+                <div id="centerColumnBottom">
+                    <button class="gameButton" id="button8" onclick="press8( )"></button>
+                </div>
+            </div>
+            <div id="rightColumn">
+                <div id="rightColumnTop">
+                    <button class="gameButton" id="button3" onclick="press3( )"></button>
+                </div>
+                <div id="rightColumnMiddle">
+                    <button class="gameButton" id="button6" onclick="press6( )"></button>
+                </div>
+                <div id="rightColumnBottom">
+                    <button class="gameButton" id="button9" onclick="press9( )"></button>
+                </div>
+            </div>
+            <button id="reset" onclick="reset()">reset</button>
+        </section>
     </div>
-
-    <div id="leftColumnMiddle">
-          <button class = "gameButton" id ="button4"onclick="press4( )"></button>
-    </div>
-
-    <div id="leftColumnBottom">
-          <button class = "gameButton" id ="button7" onclick="press7( )"></button>
-    </div>
-
-  </div> 
-
-<!-- end of leftColumn -->
-
-
-<!--centerColumn-->
-
-  <div id="centerColumn"> <!-- center column -->
-
-    <div id="centerColumnTop">
-          <button class = "gameButton" id ="button2" onclick="press2( )"></button>
-    </div>
-
-    <div id="centerColumnMiddle">
-          <button class = "gameButton" id ="button5" onclick="press5( )"></button>
-    </div>
-
-    <div id="centerColumnBottom">
-          <button class = "gameButton" id ="button8" onclick="press8( )"></button>
-    </div>
-
-  </div> <!-- end of center column -->
-
-   <div id="rightColumn"><!-- right column -->
-
-    <div id="rightColumnTop">
-              <button class = "gameButton" id="button3" onclick="press3( )"></button>
-    </div>
-
-    <div id="rightColumnMiddle">
-              <button class = "gameButton" id="button6" onclick="press6( )"></button>
-    </div>
-
-    <div id="rightColumnBottom">
-              <button class = "gameButton" id="button9" onclick="press9( )"></button>
-    </div>
-
-  </div><!-- end of right column -->
-  <button id = "reset" onclick = "reset()">reset</button>
-
- 
-
-
-  </section><!-- end of gameboard -->
-
-  </div>
-
-<script type="text/javascript" src="js/project1.js"></script>
+    <script type="text/javascript" src="js/project1.js"></script>
 </body>
+
 </html>
