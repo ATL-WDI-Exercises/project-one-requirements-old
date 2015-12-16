@@ -92,13 +92,6 @@ function press9() {
     press(9);
 }
 
-function blink() {
-    var f = document.getElementById("title");
-    setInterval(function() {
-        f.style.display = (f.style.display == 'none' ? '' : 'none');
-    }, 1000);
-}
-
 function checkForWin(colorName, colorMoves, winCombo) {
     var result = winCombo.every(function(item) {
         return colorMoves.indexOf(item) >= 0;
@@ -109,16 +102,36 @@ function checkForWin(colorName, colorMoves, winCombo) {
         console.log('checked ' + colorName + ' for a winner...none found');
     }
     return result; //returns true if there IS a winner
-};
+}
 
 function endGame(winner) {
 
-    document.getElementById("title").style.color = winner; //the title is the color of the winner
-    var x = document.getElementsByClassName("gameButton")
+    //the title is the color of the winner
+    document.getElementById("title").style.color = winner; 
+
+    //disables the remaining buttons
+    var x = document.getElementsByClassName("gameButton");
     for (i = 0; i < x.length; i++) {
         x[i].setAttribute("disabled", "true");
+}
+blink(winner);
+}
 
-        blink(title);
+function blink (winner) {
+    var myToggle = false;
+    callback();
 
-    }
+    function callback ( ) {
+
+        if (myToggle) {
+           document.getElementById('title').style.color=winner;
+       }
+       else {
+           document.getElementById('title').style.color="#ffffff";
+       }
+
+       myToggle = !myToggle;
+
+        setTimeout(callback,1000);
+}
 }
