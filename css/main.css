@@ -1,0 +1,99 @@
+#container {
+  height:24rem;
+  width:16rem;
+  border:1px solid black;
+  border-radius: 25px;
+  text-align: center;
+}
+
+
+#gameboard {
+  height:auto;
+  width: 100%;
+  text-align: center;
+  margin:0% auto auto auto;
+
+}
+
+h1{
+  color: red;
+  font-size: 2rem;
+  font-family: helvetica;
+  letter-spacing: .5rem;
+  text-align: center;
+  margin: 0% auto auto 4% ;
+}
+
+ #leftColumn{
+  display: inline-block;
+  height:auto;
+  width:32.2%;
+  margin:-40% auto auto auto;
+ }
+
+button{
+  height:95%;
+  width: 95%;
+  margin:2.5% auto auto auto;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 1.5rem;
+}
+
+#reset{
+  background-color: green;
+  border-radius:  23px;
+  height:4.5rem;
+  width:98%;
+  margin:2.5% auto auto auto;
+}
+
+#leftColumnTop{
+
+  height:5.5rem;
+}
+
+#leftColumnMiddle{
+  height:5.5rem;
+
+}
+
+#leftColumnBottom{
+  height:5.5rem;
+}
+
+#centerColumn{
+  display: inline-block;
+  height:auto;
+  width:32.2%;
+ }
+
+#centerColumnTop{
+  height:5.5rem;
+}
+
+#centerColumnMiddle{
+  height:5.5rem;
+}
+
+#centerColumnBottom{
+  height:5.5rem;
+}
+
+#rightColumn{
+  display: inline-block;
+  height:auto;
+  width:32.2%;
+ }
+
+#rightColumnTop{
+  height: 5.5rem;
+}
+
+#rightColumnMiddle{
+  height: 5.5rem;
+}
+
+#rightColumnBottom{
+  height: 5.5rem;
+}
